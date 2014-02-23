@@ -1,5 +1,5 @@
 @echo off
-set ABSDIR=external-libs\ActionBarSherlock\library
+set ABSDIR=external-libs\ActionBarSherlock\actionbarsherlock
 
 if not exist %ABSDIR% (
 	mkdir .git\modules\external-libs
