@@ -1,4 +1,4 @@
-package com.googlecode.gtalksms;
+package com.googlecode.gtalksms.services;
 
 import android.content.ComponentName;
 import android.content.Intent;
@@ -12,7 +12,10 @@ import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.ExtractedTextRequest;
 import android.view.inputmethod.InputConnection;
 
-public class KeyboardInputMethod extends InputMethodService
+import com.googlecode.gtalksms.MainService;
+import com.googlecode.gtalksms.R;
+
+public class KeyboardInputMethodService extends InputMethodService
     implements KeyboardView.OnKeyboardActionListener {
 
     private MainService mainService;

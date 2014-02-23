@@ -31,6 +31,7 @@ import com.googlecode.gtalksms.panels.MainActivity;
 import com.googlecode.gtalksms.receivers.NetworkConnectivityReceiver;
 import com.googlecode.gtalksms.receivers.PublicIntentReceiver;
 import com.googlecode.gtalksms.receivers.StorageLowReceiver;
+import com.googlecode.gtalksms.services.KeyboardInputMethodService;
 import com.googlecode.gtalksms.tools.CrashedStartCounter;
 import com.googlecode.gtalksms.tools.DisplayToast;
 import com.googlecode.gtalksms.tools.Log;
@@ -85,7 +86,7 @@ public class MainService extends Service {
     private static XmppManager sXmppMgr;
     private static BroadcastReceiver sXmppConChangedReceiver;
     private static BroadcastReceiver sStorageLowReceiver;
-    private static KeyboardInputMethod sKeyboardInputMethod;
+    private static KeyboardInputMethodService sKeyboardInputMethodService;
     private static PowerManager sPm;
     private static PowerManager.WakeLock sWl;
     private static PendingIntent sPendingIntentLaunchApplication = null;
@@ -512,12 +513,12 @@ public class MainService extends Service {
         }
     }
 
-    public void setKeyboard(KeyboardInputMethod keyboard) {
-        sKeyboardInputMethod = keyboard;
+    public void setKeyboard(KeyboardInputMethodService keyboard) {
+        sKeyboardInputMethodService = keyboard;
     }
 
-    public KeyboardInputMethod getKeyboard() {
-        return sKeyboardInputMethod;
+    public KeyboardInputMethodService getKeyboard() {
+        return sKeyboardInputMethodService;
     }
 
     /**

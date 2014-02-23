@@ -1,4 +1,4 @@
-package com.googlecode.gtalksms;
+package com.googlecode.gtalksms.widgets;
 
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
@@ -9,6 +9,9 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.RemoteViews;
 
+import com.googlecode.gtalksms.MainService;
+import com.googlecode.gtalksms.R;
+import com.googlecode.gtalksms.XmppManager;
 import com.googlecode.gtalksms.tools.Tools;
 
 public class WidgetProvider extends AppWidgetProvider {
