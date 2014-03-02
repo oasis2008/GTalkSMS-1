@@ -34,7 +34,7 @@ public class XmppOfflineMessages {
                 String fullJid = msg.getFrom();
                 String bareJid = StringUtils.parseBareAddress(fullJid);
                 String messageBody = msg.getBody();
-                Log.d("Retrieved offline message from " + fullJid + " with content: " + messageBody.substring(0, 40));
+                Log.d("Retrieved offline message from " + fullJid + " with content: " + (messageBody.length() > 40 ? messageBody.substring(0, 40) : messageBody));
                 for (String notifiedAddress : notifiedAddresses) {
                     if (bareJid.equals(notifiedAddress) && (messageBody != null)) {
                         Tools.startSvcXMPPMsg(ctx, messageBody, fullJid);
